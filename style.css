@@ -1,0 +1,280 @@
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif; /* Elegant font */
+  background: linear-gradient(to right, #6a0dad, #8a2be2); /* Royal purple gradient */
+  color: #fff; /* Light text for contrast */
+  scroll-behavior:smooth;
+}
+html{
+  scroll-behavior:smooth;
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #2e003e; /* Dark purple background */
+  color: #fff;
+  font-family: 'Georgia', serif; /* Elegant font for navbar */
+}
+
+.navbar a {
+  color: #d3b8e8; /* Light lavender text */
+  font-size: 1.1rem;
+}
+
+.navbar a:hover {
+  color: #ffbf00; /* Gold on hover */
+}
+
+/* Carousel Styling */
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Grid Styling */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  width: 100%;
+  max-width: 900px; /* Increase the grid container size */
+  margin: 20px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.grid-item {
+  height: 250px; /* Adjusted size */
+  background-size: 100% 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Box */
+.box {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+/* Birthday Invitation Styling */
+.birthday-invitation-container {
+  background-color: #2e003e;
+  color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  max-width: 600px;
+  font-family: 'Georgia', serif;
+}
+
+.birthday-header h2 {
+  text-align: center;
+  font-size: 28px;
+  color: #ffd700; /* Gold color for elegance */
+}
+
+.birthday-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: center;
+  color: #e6e6e6; /* Light gray for details */
+}
+
+.birthday-info h4 {
+  font-size: 20px;
+  color: #ffbf00; /* Gold color for date, time, and venue */
+  text-align: center;
+  margin: 10px 0;
+}
+
+.birthday-footer p {
+  font-size: 18px;
+  color: #e6e6e6;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.birthday-footer strong {
+  font-weight: bold;
+}
+
+/* Responsive Design for Birthday Invitation */
+@media (max-width: 768px) {
+  .birthday-invitation-container {
+    width: 90%;
+    padding: 20px;
+  }
+  .birthday-header h2 {
+    font-size: 24px;
+  }
+}
+
+/* Map Container */
+.map-container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #2e003e;
+  color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-text {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.footer-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-phone {
+  font-weight: bold;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #bdc3c7;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 768px) {
+  .footer-title {
+    font-size: 2rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Horizontal Scroll */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 15px;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 90%;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  width: 250px;
+  height: 180px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position:top;
+}
+
+.scroll-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-item:hover img {
+  transform: scale(1.1);
+}

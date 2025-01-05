@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>THANVISHSHANMUKH</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+     <link rel="stylesheet" href="style.css">
+    
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#th">THANVISHSHANMUKH</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="#invitation">Invitation</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+   <!-- Carousel Section -->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./imges/DALL·E 2025-01-04 23.03.32 - A vibrant and festive birthday celebration scene for TanvishShanmukh, with a beautifully decorated cake featuring colorful candles, balloons of variou.webp" class="d-block w-100" alt="Image 1">
+    </div>
+    <div class="carousel-item">
+      <img src="./imges/20241222_172502_1734929520777.jpg" class="d-block w-100" alt="Image 2">
+    </div>
+    <div class="carousel-item">
+      <img src="./imges/20241222_172502.jpg" class="d-block w-100" alt="Image 3">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+    
+
+    <div class="grid-container" id="home">
+      <!-- Grid items will be dynamically updated by JavaScript -->
+    </div>
+   
+    
+    <canvas id="myCanvas" width="300" height="300" style="display:none;"></canvas>
+    <script>
+      const img = new Image();
+      img.src = './imges/20241222_172502_1734929520777.jpg'; // Source of the image
+      img.onload = function () {
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+        const partWidth = img.width / 3;
+        const partHeight = img.height / 3;
+    
+        const gridContainer = document.querySelector('.grid-container');
+        gridContainer.innerHTML = ''; // Clear existing grid items if any
+    
+        for (let y = 0; y < 3; y++) {
+          for (let x = 0; x < 3; x++) {
+            const partCanvas = document.createElement('canvas');
+            partCanvas.width = partWidth;
+            partCanvas.height = partHeight;
+            const partCtx = partCanvas.getContext('2d');
+            partCtx.drawImage(
+              img,
+              x * partWidth,
+              y * partHeight,
+              partWidth,
+              partHeight,
+              0,
+              0,
+              partWidth,
+              partHeight
+            );
+    
+            const partURL = partCanvas.toDataURL(); // Get URL for each part
+    
+            // Create grid item dynamically
+            const gridItem = document.createElement('div');
+            gridItem.classList.add('grid-item');
+            gridItem.style.backgroundImage = `url(${partURL})`;
+            gridContainer.appendChild(gridItem); // Add grid item to container
+          }
+        }
+      };
+    </script>
+     
+   <!-- In your main index.html -->
+    <div class="file-container" id="th">
+   <iframe src="./index2.html" width="100%" height="600px" style="border:none;"></iframe>
+       
+    </div>
+
+
+    <!-- Grid Section -->
+    <div class="grid-container">
+      <div class="box">
+        <img src="./imges/20241222_174919.jpg" alt="Image 1">
+      </div>
+      <div class="box">
+        <img src="./imges/20241222_172502_1734929520777.jpg" alt="Image 2">
+      </div>
+      <div class="box">
+        <img src="./imges/IMG-20241223-WA0043.jpg" alt="Image 3">
+      </div>
+      <div class="box">
+        <img src="./imges/IMG-20241223-WA0115.jpg" alt="Image 4">
+      </div>
+      <div class="box">
+        <img src="./imges/IMG-20241223-WA0109.jpg" alt="Image 5">
+      </div>
+      <div class="box">
+        <img src="./imges/IMG-20241223-WA0101.jpg" alt="Image 6">
+      </div>
+      <div class="box">
+        <img src="./imges/20241222_172456_1734929456966.jpg" alt="Image 7">
+      </div>
+      <div class="box">
+        <img src="./imges/20241222_174913.jpg" alt="Image 8">
+      </div>
+      <div class="box">
+        <img src="./imges/IMG-20241223-WA0087.jpg" alt="Image 9">
+      </div>
+    </div>
+    
+    <!-- Horizontal Scrolling Section -->
+    <div class="scroll-container">
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0071.jpg" alt="Scroll Image 1">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0067.jpg" alt="Scroll Image 2">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0089.jpg" alt="Scroll Image 3">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0134.jpg" alt="Scroll Image 4">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0134.jpg" alt="Scroll Image 5">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0095.jpg" alt="Scroll Image 6">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0138.jpg" alt="Scroll Image 7">
+      </div>
+      <div class="scroll-item">
+        <img src="./imges/IMG-20241223-WA0059.jpg" alt="Scroll Image 8">
+      </div>
+    </div>
+    
+     <!-- Birthday Celebration Invitation Container -->
+<div class="birthday-invitation-container" id = "invitation">
+  <div class="birthday-header">
+    <h2>🎉 You're Invited to a Special Birthday Celebration! 🎉</h2>
+  </div>
+  <div class="birthday-details">
+    <p>Dear Family and Friends,</p>
+    <p>We are excited to invite you to celebrate a momentous occasion with us! Join us as we mark another year of life, laughter, and cherished memories.</p>
+    <p>Your presence will make this celebration even more memorable, so we hope to see you there!</p>
+  </div>
+  <div class="birthday-info">
+    <h4>📅 Date: January 12, 2025</h4>
+    <h4>⏰ Time: 6:00 PM</h4>
+    <h4>📍 Venue: Venkateswara Function Hall, Mallakajgiri, Hyderabad</h4>
+  </div>
+  <div class="birthday-footer">
+    <p>Looking forward to celebrating with you! 🥳</p>
+    <p>Best Regards, <strong>VISHAL KUMAR</strong></p>
+  </div>
+</div>
+
+
+    <!-- Map Section -->
+    <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps?q=Venkateswara+Function+Hall,+Mallakajgiri,+Hyderabad&z=15&output=embed"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    
+
+    <!-- Footer -->
+<footer class="footer" id="contact">
+  <div class="footer-content">
+    <h2 class="footer-title">Contact Information</h2>
+    <p class="footer-text">Email: <a href="mailto:info@example.com" class="footer-link">vishalkumar@gmail.com</a></p>
+    <p class="footer-text">Phone: <span class="footer-phone">+91 7207333092</span></p>
+    <p class="footer-text">Address:Road No:9,Mallakajgiri</p>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Srinivas.M. All rights reserved.</p>
+  </div>
+</footer>
+
+  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
